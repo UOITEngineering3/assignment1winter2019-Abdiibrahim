@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI.Controllers.GamesController.GetGames">
+            <summary>
+            Get all games
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.GamesController.GetByID(System.Int32)">
+            <summary>
+            Get a game by gameId
+            </summary>
+            <param name="gameId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
