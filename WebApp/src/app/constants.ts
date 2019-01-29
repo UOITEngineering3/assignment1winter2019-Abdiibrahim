@@ -1,2 +1,2 @@
 /** Base API URL */
-export const API_URL = '//localhost:5000/api';
+export const API_URL = '//52.202.251.76/api';

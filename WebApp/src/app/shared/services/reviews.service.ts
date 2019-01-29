@@ -31,7 +31,7 @@ export class ReviewsService {
     return this._http.put<Review>(`${API_URL}/Reviews/${review.reviewId}`, review);
   }
 
-  delete(reviewId: number): Observable<Review> {
-    return this._http.delete<Review>(`${API_URL}/Reviews/${reviewId}`);
+  delete(review: Review): Observable<Review> {
+    return this._http.delete<Review>(`${API_URL}/Reviews/${review.reviewId}`);
   }
 }

@@ -1,3 +1,5 @@
+<button matButton (click)="goToInsert()">Insert Review</button>
+
 <table mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="reviewId">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Review ID </th>
@@ -24,6 +26,11 @@
     <td mat-cell *matCellDef="let review"> {{review.isCompleted}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let review"><button mat-button (click)="deleteReview(review)">Delete</button></td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="columns"></tr>
-  <tr mat-row *matRowDef="let row; columns: columns" (click)="goToReviewDetails(row.reviewId)"></tr>
+  <tr mat-row *matRowDef="let row; columns: columns"></tr>
 </table>

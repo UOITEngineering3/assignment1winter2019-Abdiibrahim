@@ -39,6 +39,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewDetailsComponent } from './review-details/review-details.component';
 import { GamesService } from './shared/services/games.service';
 import { ReviewsService } from './shared/services/reviews.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { ReviewsService } from './shared/services/reviews.service';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ReactiveFormsModule
   ],
   providers: [GamesService, ReviewsService],
   bootstrap: [AppComponent]

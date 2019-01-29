@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: 'games', component: GamesComponent},
   {path: 'review', children: [
     {path: ':gameId', component: ReviewsComponent},
-    {path: ':gameId/:reviewId', component: ReviewDetailsComponent}
+    //{path: ':gameId/:reviewId', component: ReviewDetailsComponent},
+    {path: 'new/:gameId', component: ReviewDetailsComponent}
   ]}
 ];
 
