@@ -1,0 +1,29 @@
+<table mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="reviewId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Review ID </th>
+    <td mat-cell *matCellDef="let review"> {{review.reviewId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="score">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Score </th>
+    <td mat-cell *matCellDef="let review"> {{review.score}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="comments">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
+    <td mat-cell *matCellDef="let review"> {{review.comments}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="isPlayed">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Played? </th>
+    <td mat-cell *matCellDef="let review"> {{review.isPlayed}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="isCompleted">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Completed? </th>
+    <td mat-cell *matCellDef="let review"> {{review.isCompleted}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+  <tr mat-row *matRowDef="let row; columns: columns" (click)="goToReviewDetails(row.reviewId)"></tr>
+</table>
